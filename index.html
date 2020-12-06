@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kintry.com/project/grocerylist/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery</title>
+</head>
+
+<body>
+
+    <div id="loginDiv">
+        <h4>Protect your grocery list with Username & password</h4>
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="text" placeholder="Username" name="usrnm" id="name">
+        </div>
+        <div class="input-container">
+            <i class="fa fa-key icon"></i>
+            <input class="input-field" type="password" placeholder="Password" id="password" name="psw">
+        </div>
+        <p id="loginErr"></p>
+        <button class="btn btn-primary" onclick="login()">Login</button>
+    </div>
+    <div id="olderList" class="column left">
+        <h4>Past list</h4>
+        <div class="listOlder" id="listOlder0" onclick=selectOlderList(0) title="Select this list">
+            <ul id="oldItemList0">
+
+            </ul>
+
+        </div>
+        <div class="listOlder" id="listOlder1" onclick=selectOlderList(1) title="Select this list">
+            <ul id="oldItemList1">
+
+            </ul>
+
+        </div>
+
+
+    </div>
+    <div class="my-4 pg-4" id="shoppingListDiv">
+        <div class="inline">
+            <i class="fa fa-save pd-4 my-4 icon-noBg" onclick="save()" title="Save & Exit"></i>
+            <h1 class="center" id="welcome"> </h1>
+        </div>
+        <div class="input-container sticky">
+            <i class="fa fa-plus icon-button" title="Add Item " onclick="addItem()"></i>
+            <input class="input-field" type="text" placeholder="Add Item then click +" id="shopping" required>
+        </div>
+
+        <p id="shoppingErr">5 item left</p>
+        <div>
+            <i class="fa fa-refresh cursor" onclick="getList()" title="Last Saved"></i>
+
+            <u class="cursor" id="createNew" onclick="createNewList()" title="Create New List">New</u>
+        </div>
+
+
+        <ol id="itemList">
+
+        </ol>
+
+
+
+
+
+    </div>
+
+    <div class="my-4 pg-4" id="edtItem">
+        <div class="input-container">
+            <i class="fa fa-hand-o-left icon" title="Back" onclick="showScreen(1)"></i>
+            <input type="text" placeholder="Edit Item" id="editItem" required />
+            <i class="fa fa-check icon" onclick="editItem()" title="Save"> </i>
+            <i class="fa fa-trash icon bg-red" title="Remove" onclick="delItem()"> </i>
+        </div>
+
+    </div>
+</body>
+<script defer src="https://kintry.com/project/grocerylist/index.js">
+
+</script>
+
+</html>

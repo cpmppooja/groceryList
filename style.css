@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(58, 58, 160) 20%, rgb(20, 20, 24));
+    color: #fff;
+}
+
+#loginDiv, #shoppingListDiv, #edtItem{
+   margin: auto;
+   width: 50%;
+   padding: 40px;
+}
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol li {
+  text-align: center;
+  color: blue;
+  background: #fff;
+  padding: 15px;
+  margin: 35px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+p{
+    color: red;
+    text-align: center;
+}
+
+h1{
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+/* Style the form icons */
+.icon {
+
+  font-size: 34px;
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 70px;
+  text-align: center;
+}
+
+.icon-noBg{
+  font-size: 34px;
+  padding: 10px;
+  color: white;
+  min-width: 70px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+
+}
+
+
+.icon-button {
+
+  font-size: 34px;
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 70px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
+
+  div.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+  }
+
+  .icon-button:hover{
+    opacity: 1;
+  }
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.inline{
+    display: inline;
+}
+
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left, .right {
+  margin: auto ;
+  width: 25%;
+  background-color: rgba(125, 126, 128, 0.253);
+}
+
+.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cursor{
+  cursor: pointer;
+
+}
+
+.listOlder{
+  margin: 5px;
+  cursor: pointer;
+  display: none;
+  border: white 1px solid
+}
+
+ /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
